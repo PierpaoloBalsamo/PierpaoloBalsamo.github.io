@@ -89,6 +89,18 @@
 				myText.style.backgroundColor = newColor;
 				myText.innerText = newColor;
 			}
+
+			var sliderRed = document.getElementById("rangeRed");
+			var sliderGreen = document.getElementById("rangeRed");
+			var sliderBlue = document.getElementById("rangeRed");
+			var paragraph = document.getElementById("toChange3");
+			sliderRed.addEventListener('input', sliderChange);
+			
+			function sliderChange(){
+				var red = parseInt(sliderRed.value, 0);
+				var stringRed = red.toString(16).padStart(2, '0');
+				paragraph.innerText="#"+stringRed+"0000";
+			}
 		</script>
 	</body>
 </html>
